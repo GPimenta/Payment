@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17.0-alpine3.20
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: postgres
+    command: ["postgres", "-c", "log_statement=all"]
+    volumes:
+      - ./containers/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./containers/postgres/data/:/import_data/
+      - ./containers/postgres/pgdata:/var/lib/postgresql/data
+
+

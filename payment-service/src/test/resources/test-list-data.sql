@@ -1,0 +1,31 @@
+INSERT INTO payments (
+    id, 
+    created_at, 
+    amount, 
+    currency, 
+    debtor_account_number, 
+    creditor_account_number
+) VALUES (
+    '123e4567-e89b-12d3-a456-426614174000', 
+    NOW(), 
+    '100.50', 
+    'USD', 
+    'DE1234567890', 
+    'US0987654321'
+),
+(
+    '12345678-e89b-12d3-a456-426614174000',
+    NOW(),
+    '50.50',
+    'USD',
+    'DE111111110',
+    'US011111111'
+),
+(
+    '87654321-e89b-12d3-a456-426614174000',
+    NOW(),
+    '10.10',
+    'USD',
+    'DE222222220',
+    'US022222222'
+);
